@@ -1,3 +1,3 @@
 # Mardecera.github.io
 
--- https://www.mardecera.github.io
+- https://mardecera.github.io/
