@@ -2,10 +2,128 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Mardecera</title>
+        <link rel="stylesheet" href="/css/normalize.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="/css/main.css" type="text/css" media="screen">
+        <script src="https://kit.fontawesome.com/b051676b13.js" crossorigin="anonymous"></script>
+        <title>Remainss</title>
     </head>
     <body>
-        <h1>Mardecera</h1>
-        <a href="/docs/test"><button type="button" name="button">Ver</button></a>
+        <header>
+            <nav>
+                <div id="iso">
+                    <span>R</span>
+                </div>
+                <ul id="info">
+                    <li>Nosotros</li>
+                    <li>Contactanos</li>
+                    <li>Productos</li>
+                </ul>
+                <ul id="redes">
+                    <li><span><i class="fab fa-youtube"></i></span></li>
+                    <li><span><i class="fab fa-facebook-f"></i></span></li>
+                    <li><span><i class="fab fa-instagram"></i></span></li>
+                    <li><span><i class="fab fa-whatsapp"></i></span></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="presentation">
+            <div id="left">
+                <span id="logo">Remainss</span>
+                <span id="slogan">La elegancia a la vista</span>
+            </div>
+            <div id="right">
+                <img src="img/joya-1.png" alt="joya de presentacion">
+            </div>
+            <div id="skip">
+                <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+        </section>
+        <section id="nosotros">
+            <div class="por100">
+                <div class="description">
+                    <div class="sub-title">
+                        <span>Nosotros</span>
+                    </div>
+                    <p class="min">
+                        <span>Lorem</span> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p class="min">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="img/llama-vidrio.png" alt="llamita de vidrio">
+                </div>
+            </div>
+            <div class="skip-positivo">
+                <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+        </section>
+        <section id="productos">
+            <div class="sub-title">
+                <span>Productos</span>
+            </div>
+            <div class="selectProductos">
+                <div>
+                    <span>Aretes</span>
+                    <img src="img/arete.png" alt="arete">
+                    <a href="/categ/aretes.html"><button class="minButton">Ver</button></a>
+                </div>
+                <div>
+                    <span>Anillos</span>
+                    <img src="img/anillo.png" alt="anillo">
+                    <a href="/categ/aretes.html"><button class="minButton">Ver</button></a>
+                </div>
+                <div>
+                    <span>Adornos</span>
+                    <img src="img/adorno.png" alt="adorno">
+                    <a href="/categ/aretes.html"><button class="minButton">Ver</button></a>
+                </div>
+                <div>
+                    <span>Dijes</span>
+                    <img src="img/dije.png" alt="dije">
+                    <a href="/categ/aretes.html"><button class="minButton">Ver</button></a>
+                </div>
+                <div>
+                    <span>Pulseras</span>
+                    <img src="img/pulsera.png" alt="pulsera">
+                    <a href="/categ/aretes.html"><button class="minButton">Ver</button></a>
+                </div>
+                <!--div id="skip">
+                    <span><i class="fas fa-chevron-down"></i></span>
+                </div-->
+            </div>
+            <div class="selectProductos-tienda">
+                <a href="#"><butto class="minButton buttonDefault">Ir a la tienda</butto></a>
+            </div>
+            <div class="skip-negativo">
+                <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+        </section>
+        <section id="contactanos">
+            <div class="sub-title">
+                <span>Contactanos</span>
+            </div>
+            <div class="contacto">
+                <form method="post" class="minDefault">
+                    <div>
+                        <label for="" >Correo: </label>
+                        <input type="text" name="" value="" class="inputDefault">
+                    </div>
+                    <div>
+                        <label for="" >Asunto: </label>
+                        <input type="text" name="" value="" class="inputDefault">
+                    </div>
+                    <div>
+                        <label for="" >Mensaje: </label>
+                        <textarea name="name" rows="8" class="inputDefault"></textarea>
+                    </div>
+                    <button type="button" name="button" class="minDefault buttonBGW">Enviar</button>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <span class="minDefault">&copy 2020 MachipTec. Todos los derechos reservados.</span>
+        </footer>
     </body>
 </html>
