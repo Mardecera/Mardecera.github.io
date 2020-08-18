@@ -5,14 +5,14 @@
 body{
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    font-family: 'Roboto';
+    font-family: 'Roboto'
 }
 
 html {
   height: -webkit-fill-available;
 }
 
-#presentation{
+.container{
     width: 100%;
     height: 100vh;
     background-color: #FFF5D0;
@@ -37,16 +37,28 @@ h1, h2, h3, h4, h5, h6{
     background-size: 100%
 }
 
-@media (max-width: 800px) and (orientation: portrait) {
-    #presentation{
-        height: 99vh;
-        position: fixed;
-    }
-
+@media (max-width: 800px){
     .construction{
         width: calc(100vw - 10em);
         height: 30%;
-        background-size: 100%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1300px){
+    #presentation{
+        height: 100vh;
+        background-color: #FFF5D0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        height: 50%;
+    }
+
+    .construction{
+        width: 70%;
     }
 }
 
@@ -73,7 +85,8 @@ button{
 
 @media (min-width: 720px) and (max-width: 1300px) {
     .hola{
-        font-size: 2.7em;
+        font-size: 1.5em;
+        font-weight: bold;
     }
 
     .saludo{
