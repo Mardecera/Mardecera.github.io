@@ -3,13 +3,10 @@
 }
 
 body{
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
     font-family: 'Roboto'
 }
 
 html {
-  height: -webkit-fill-available;
 }
 
 .container{
