@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-/*
+
 (function(window, document, undefined) {
     var device = {};
 
@@ -39,9 +39,14 @@
         };
       }, 100);
     });
-})(window, document);*/
+    console.log(device.viewport.height);
+    let vh = device.viewport.height * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+})(window, document);
 
 window.addEventListener('resize', () => {
-    let vh = window.innerHeight * 0.01;
+    /*let vh = window.innerHeight * 0.01;*/
+    let vh = device.viewport.height * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
+    console.log(vh);
 });
