@@ -39,14 +39,9 @@
         };
       }, 100);
     });
-    console.log(device.viewport.height);
-    let vh = device.viewport.height * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-})(window, document);
 
-window.addEventListener('resize', () => {
-    /*let vh = window.innerHeight * 0.01;*/
+    /*---------- Paso por variable al css para calcular el view visible en el navegador ---------*/
     let vh = device.viewport.height * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-    console.log(vh);
-});
+    
+})(window, document);
