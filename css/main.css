@@ -66,8 +66,10 @@ h1, h2, h3, h4, h5, h6{
     display: flex;
     font-size: 1.7em;
     color: #3469B2;
-    margin: 3em auto;
+    margin: 3em 0em;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .hola{
@@ -91,7 +93,7 @@ button{
 
     .saludo{
         margin: 3.3em auto;
-        width: 50%;
+        width: 70%;
     }
 
     .saludo, button{
