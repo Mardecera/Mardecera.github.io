@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5, h6{
 @media (min-width: 700px) and (max-width: 1300px){
     #presentation{
         height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
         background-color: #FFF5D0;
         display: flex;
         justify-content: center;
