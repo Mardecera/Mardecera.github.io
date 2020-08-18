@@ -6,9 +6,6 @@ body{
     font-family: 'Roboto'
 }
 
-html {
-}
-
 .container{
     width: 100%;
     height: 100vh;
@@ -41,7 +38,13 @@ h1, h2, h3, h4, h5, h6{
     }
 }
 
-@media (min-width: 700px) and (max-width: 1300px){
+@media (max-height: 400px), (max-width: 350px){
+    .construction{
+        display: none;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1300px) and (orientation: portrait){
     #presentation{
         height: 100vh;
         height: calc(var(--vh, 1vh) * 100);
@@ -60,13 +63,32 @@ h1, h2, h3, h4, h5, h6{
     }
 }
 
+@media (min-width: 700px) and (max-width: 1300px) and (orientation: landscape){
+    #presentation{
+        height: 100vh;
+        height: calc((var(--vh, 1vh) * 100) - 5em);
+        background-color: #FFF5D0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        height: 100%;
+        background-color: #FFF5D0;
+    }
+    .construction{
+        width: 60%;
+        height: 60%;
+    }
+}
+
 .saludo{
     display: flex;
     font-size: 1.7em;
     color: #3469B2;
     margin: 3em 0em;
     text-align: center;
-    display: flex;
     justify-content: center;
 }
 
@@ -83,7 +105,7 @@ button{
     cursor: pointer;
 }
 
-@media (min-width: 720px) and (max-width: 1300px) {
+@media (min-width: 720px) and (max-width: 1300px) and (orientation: portrait) {
     .hola{
         font-size: 1.5em;
         font-weight: bold;
@@ -96,6 +118,61 @@ button{
 
     .saludo, button{
         font-size: 3em;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1300px) and (orientation: landscape) {
+    .hola{
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .saludo{
+        margin: 2em auto;
+        width: 70%;
+    }
+
+    .saludo, button{
+        font-size: 1.5em;
+    }
+}
+
+@media (max-height: 400px) and (max-width: 700px){
+    .saludo, button{
+        font-size: 1em;
+    }
+}
+
+@media (max-height: 100px){
+    #presentation{
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .saludo{
+        height: 100%;
+        margin: 0;
+        align-items: center;
+    }
+}
+
+@media (max-height: 200px){
+    #presentation{
+        height: 100vh;
+        height: calc((var(--vh, 1vh) * 100) - 5em);
+    }
+
+    .container{
+        height: 100%;
+    }
+
+    .saludo{
+        height: 100%;
+        margin: 0;
+        align-items: center;
+    }
+    .button{
+        display: none;
     }
 }
 
@@ -129,11 +206,32 @@ footer{
     }
 }
 
-@media (min-width: 700px) and (max-width: 1300px){
+@media (min-width: 700px) and (max-width: 1300px) and (orientation: portrait){
     footer{
         height: auto;
         font-size: 3em;
         padding: 2em 2em;
         text-align: center;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1300px) and (orientation: landscape){
+    footer{
+        height: auto;
+        font-size: 1.5em;
+        padding: 2em 2em;
+        text-align: center;
+    }
+}
+
+@media (max-height: 400px) and (max-width: 700px){
+    footer{
+        font-size: 1em;
+    }
+}
+
+@media (max-height: 100px){
+    footer{
+        display: none;
     }
 }
