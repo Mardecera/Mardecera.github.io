@@ -10,11 +10,19 @@
 
  *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-size: 62.5%; */
  }
+
 
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+ul{
+    list-style: none;
 }
 
 /* Sections
@@ -23,11 +31,6 @@ html {
 /**
  * Remove the margin in all browsers.
  */
-
-body {
-  margin: 0;
-  font-size: 62.5%;
-}
 
 textarea:focus, input:focus, button:focus{
     outline: none;
