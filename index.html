@@ -7,23 +7,165 @@
         <meta name="robots" content="index">
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="./css/main.css">
-        <!-- <script src="https://kit.fontawesome.com/b051676b13.js" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="./source/styles/icomoon.css">
+        <link rel="stylesheet" href="./source/styles/general.css">
         <title>Mardecera</title>
     </head>
     <body>
-        <div class="container">
-            <div class="contain">
-                <h2 class="title">Portfolio:</h2>
-                <ul class="list-group">
-                    <li><a href="https://wannsay.netlify.app/"> Wannsay </a></li>
-                    <li><a href="https://vettapp.netlify.app/">Vettapp</a></li>
-                    <li><a href="https://currweath.netlify.app">Currweath</a></li>
-                    <li><a href="https://crmcrud.netlify.app">CRM (crud)</a></li>
-                    <li><a href="https://geneword.netlify.app">Geneword</a></li>
-                    <li><a href="https://lysear.netlify.app">Lysear</a></li>
-                </ul>
-            </div>
-        </div>
+        <main>
+            <nav class="section__nav">
+                <div class="nav__logo">
+                    <span class="icon__logo"></span>
+                </div>
+                <div class="nav__buttons hide">
+                    <span class="btn__close"><i class="fas fa-times"></i></span>
+                    <ul>
+                        <li>Projects</li>
+                        <li>About Me</li>
+                        <li>Skills</li>
+                        <li>Contact Me</li>
+                    </ul>
+                    <div class="nav__buttons__extra">
+                        <div class="nav__swithces">
+                            <div class="nav__theme">
+                                <span>
+                                    <i class="fas fa-sun"></i>
+                                    <i class="fas fa-moon"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="nav__redes">
+                            <a href="" class="red__item"><i class="fab fa-facebook-f"></i></a>
+                            <a href="" class="red__item"><i class="fab fa-instagram"></i></a>
+                            <a href="" class="red__item"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="" class="red__item"><i class="fab fa-github"></i></a>
+                            <a href="" class="red__item"><i class="fab fa-whatsapp"></i></a>
+                            <a href="" class="red__item"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn__menu">
+                    <span class="icon__barmenu"></span>
+                </div>
+            </nav>
+            <section class='section__main'>
+                <div class="sub__info">
+                    <span class="main__salute">Hi, I'm</span><br>
+                    <span class="main__name">Jonathan<br>Cervantes Alarcon</span><br>
+                    <span class="main__ocupation">Junior <span class="highlight">frontend</span> developer</span><br>
+                    <a href="./public/images/_me_1000.png" download="profile.png" class="btn__a">Curriculum<span><i class="fas fa-arrow-down"></i></span></a>
+                </div>
+                <div class="sub__picture">
+                    <figure>
+                        <img loading='lazy' decoding='async' src="./public/images/_me_1000.png" alt="_me">
+                    </figure>
+                </div>
+            </section>
+            <section class='section__projects'>
+                <div class="sub__title">Projects</div>
+                <div class="sub__carrousel">
+                    <div class="sub__items">
+                        <div class="sub__item">
+                            <a href="https://vettapp.netlify.app/">
+                                <figure>
+                                    <img loading='lazy' decoding='async' src="./public/images/_projects_2.PNG" alt="_projects_2">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="sub__item">
+                            <a href="https://wannsay.netlify.app/">
+                                <figure>
+                                    <img loading='lazy' decoding='async' src="./public/images/_projects_1.PNG" alt="_projects_1">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="sub__item">
+                            <a href="https://crmcrud.netlify.app">
+                                <figure>
+                                    <img loading='lazy' decoding='async' src="./public/images/_projects_4.PNG" alt="_projects_4">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="sub__item">
+                            <a href="https://lysear.netlify.app">
+                                <figure>
+                                    <img loading='lazy' decoding='async' src="./public/images/_project_05.gif" alt="_projects_5">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="sub__item">
+                            <a href="https://geneword.netlify.app">
+                                <figure>
+                                    <img loading='lazy' decoding='async' src="./public/images/_project_06.gif" alt="_projects_6">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="sub__item">
+                            <a href="https://currweath.netlify.app">
+                                <figure>
+                                    <img loading='lazy' decoding='async' src="./public/images/_project_07.gif" alt="_projects_7">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="btn__left"><i class="fas fa-angle-left"></i></button>
+                    <button class="btn__right"><i class="fas fa-angle-right"></i></button>
+                </div>
+            </section>
+            <section class='section__aboutme'>
+                <div class="sub__title">About Me</div>
+                <div class="sub__description">
+                    <p>
+                        Lorem, ipsum dolor sit amet consec tetur adipisicing elit.
+                        Eligendi molestiae praesentium assumenda earum explicabo, quisquam, similique excepturi maxime quis dolor suscipit cupiditate quas repudiandae. Nesciunt assumenda aliquid incidunt quod cupiditate!
+                    </p>
+                    <figure>
+                        <img src="./public/images/_icono01.svg" alt="aboutme__picture">
+                    </figure>
+                </div>
+            </section>
+            <section class='section__skills'>
+                <div class="sub__title">Skills</div>
+                <div class="sub__skills">
+                    <div class="sub__items">
+                        <div class="sub__item">js</div>
+                        <div class="sub__item">html</div>
+                        <div class="sub__item">css</div>
+                        <div class="sub__item">git</div>
+                        <div class="sub__item">figma</div>
+                    </div>
+                    <div class="sub__picture">
+                        <figure>
+                            <img loading='lazy' decoding='async' src="./public/images/_icono03.svg" alt="skills__figure">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section class='section__contactme'>
+                <div class="sub__title">Contact Me</div>
+                <div class="sub__form">
+                    <form action="">
+                        <div class="field">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="field">
+                            <textarea name="" id="message" placeholder=" " required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <div class="field">
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+                </div>
+                <div class="sub__picture">
+                    <figure>
+                        <img loading='lazy' decoding='async' src="./public/images/_icono02.svg" alt="contactme__picture">
+                    </figure>
+                </div>
+            </section>
+        </main>
     </body>
+    <script src="./source/scripts/functions.js"></script>
 </html>

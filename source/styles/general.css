@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --border-radius: .3em;
+    --padding-h: 1em;
+    --padding-w: 1em;
+
+    --primary-color: #FF4D93;
+    --primary-color-light: #fd5f9f;
+    --primary-color-black: #ee3680;
+
+    --secondary-color: #223148;
+    --secondary-color-light: #2d3f58;
+    --secondary-color-black: #1c2a3f;
+}
+
+body, input, textarea, span, button{
+    font-family: 'Barlow', sans-serif;
+    color: #223148;
+}
+
+main{
+    width: 100%;
+    background-image:   radial-gradient(#f4269e40 0.85px, transparent 0.85px),
+                        radial-gradient(#f4269e40 0.85px, #f1f1fc 0.85px);
+    background-size: 34px 34px;
+    background-position: 0 0,17px 17px;
+    position: relative;
+}
+
+ul{
+    list-style: none;
+}
+
+/* 
+===============================
+            NAVBAR
+===============================
+*/
+.section__nav{
+    height: 4rem;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc(var(--padding-w) * 2);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.section__nav .nav__buttons{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: calc(var(--padding-h) * 2);
+    background-color: white;
+    text-align: center;
+    transition: .3s;
+}
+
+.section__nav .nav__buttons .btn__close{
+    cursor: pointer;
+    padding: var(--padding-h);
+}
+
+.section__nav .nav__buttons ul li{
+    padding: var(--padding-h);
+    font-size: 1.3rem;
+}
+
+.section__nav .nav__buttons ul li:hover,
+.section__nav .nav__buttons .btn__close:hover{
+    color: var(--primary-color-black);
+    cursor: pointer;
+}
+
+.section__nav .nav__buttons.hide{
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+/* 
+==================================
+            SECTION MAIN
+==================================
+*/
+
+.section__main{
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 1em 1em 0 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section__main > div{
+    width: 100%;
+    text-align: center;
+}
+
+.section__main .sub__info .main__name{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.section__main .sub__info .main__ocupation .highlight{
+    font-weight: 600;
+    position: relative;
+}
+
+.section__main .sub__info .main__ocupation .highlight::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    bottom: -.2em;
+    left: 0;
+}
+
+.section__main .sub__info a{
+    width: max-content;
+    background-color: var(--primary-color);
+    color: white;
+    margin: 1.5rem auto;
+}
+
+.section__main .sub__info a:hover{
+    background-color: var(--primary-color-black);
+}
+
+.section__main .sub__info a span{
+    position: relative;
+    pointer-events: none;
+    color: #ad1351;
+    margin: 0 10px;
+}
+
+.section__main .sub__info a span i{
+    position: absolute;
+    top: .2em;
+    left: 0;
+}
+
+.section__main .sub__info a.hover span i{
+    animation: move .5s ease-in-out;
+    color: #ffffff;
+}
+
+@keyframes move {
+    0% { top: .2em;}
+    50%{ top: 3em }
+    60%{ opacity: 0; top: -2em;}
+    100%{ opacity: 1; top: .2em;}
+}
+
+/* 
+==================================
+            SECTION PROJECTS
+==================================
+*/
+.section__projects .sub__carrousel{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__projects .sub__carrousel .sub__items{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    overflow-x:hidden;
+    overflow-y: hidden;
+    background-color: var(--primary-color-black);
+}
+
+.section__projects .sub__carrousel .sub__items .sub__item{
+    width: 100%;
+    flex-shrink: 0;
+    padding: 1rem 0;
+    transition: .5s;
+}
+
+.section__projects .sub__carrousel .sub__items .sub__item figure{
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+}
+.section__projects .sub__carrousel .sub__items .sub__item img{ object-fit:contain; }
+
+.section__projects .sub__carrousel .btn__left,
+.section__projects .sub__carrousel .btn__right{
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    box-shadow: 0 0 20px var(--primary-color-black);
+    border: 1px solid var(--primary-color-black); 
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__projects .sub__carrousel .btn__left{ left: -1.5em; }
+.section__projects .sub__carrousel .btn__right{ right: -1.5em; }
+
+/* 
+==================================
+            SECTION ABOUT ME
+==================================
+*/
+
+/* 
+==================================
+            SECTION SKILLS
+==================================
+*/
+.section__skills .sub__skills .sub__items{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.section__skills .sub__skills .sub__items .sub__item{
+    background-color: var(--secondary-color);
+    color: white;
+    width: max-content;
+    padding: .5rem 1rem;
+}
+
+/* 
+=========================================
+            SECTION CONTACT ME
+=========================================
+*/
+
+.section__contactme .sub__form form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.section__contactme .sub__form .field{
+    width: 100%;
+    position: relative;
+}
+
+.section__contactme .sub__form .field input,
+.section__contactme .sub__form .field textarea{
+    width: 100%;
+    border: 2px solid white;
+    border-radius: var(--border-radius);
+}
+
+.section__contactme .sub__form .field input:focus,
+.section__contactme .sub__form .field textarea:focus{
+    border: 2px solid var(--primary-color);
+}
+
+.section__contactme .sub__form .field label{
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    transition: .3s;
+}
+
+.section__contactme .sub__form .field input:focus + label,
+.section__contactme .sub__form .field textarea:focus + label,
+.section__contactme .sub__form .field input:not(:placeholder-shown) + label,
+.section__contactme .sub__form .field textarea:not(:placeholder-shown) + label{
+    top: -1em;
+    background-color: white;
+    padding: .1em .5em;
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--primary-color-black);
+}
+
+.section__contactme .sub__form .field input[type='submit']{
+    background-color: var(--primary-color);
+    color: white;
+    width: max-content;
+    padding: 1em 2em;
+    cursor: pointer;
+}
+
+.section__contactme .sub__form .field input[type='submit']:hover{
+    background-color: var(--primary-color-black);
+}
+
+/* 
+====================================================
+            SECTION ADDITIONAL SETTINGS
+====================================================
+*/
+img{
+    width: 100%;
+    height: 100%;
+}
+
+figure{
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.section__nav,
+.section__projects,
+.section__aboutme,
+.section__skills,
+.section__contactme{
+    width: 100%;
+    padding: 2rem 3rem;
+}
+
+.sub__title{
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section__projects .sub__title,
+.section__skills .sub__title{
+    color: #ffffff;
+}
+
+.section__projects,
+.section__skills{
+    background-color: var(--primary-color);
+}
+
+button,
+.section__nav .nav__logo,
+.section__nav .btn__menu{
+    cursor: pointer;
+}
+
+button,
+input,
+textarea{
+    padding: var(--padding-h) var(--padding-w);
+    border: none;
+    outline: none;
+}
+
+textarea{
+    height: 7rem;
+}
+
+.btn__a{
+    display: block;
+    padding: var(--padding-h);
+    text-decoration: none;
+    font-size: 1rem;
+}
