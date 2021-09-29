@@ -1,8 +1,4 @@
 :root{
-    --border-radius: .3em;
-    --padding-h: 1em;
-    --padding-w: 1em;
-
     --primary-color: #FF4D93;
     --primary-color-light: #fd5f9f;
     --primary-color-black: #ee3680;
@@ -12,7 +8,7 @@
     --secondary-color-black: #1a2941;
 
     --terceary-color: #a2ace0;
-    --terceary-color-light: #c6d0ff;
+    --terceary-color-light: #f0f2ff;
     --terceary-color-black: #8794d3;
 }
 
@@ -26,19 +22,18 @@ main.dark{
 main.dark a,
 main.dark i,
 main.dark body,
-main.dark input,
-main.dark textarea,
 main.dark span,
 main.dark button{
     color: var(--terceary-color-light);
 }
 
 main.dark .section__nav{
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color-light);
 }
 
+main.dark .section__nav .nav__buttons ul li a:hover,
 main.dark .section__nav .nav__buttons .btn__close:hover i{
-    color: var(--primary-color);
+    color: var(--primary-color-light);
 }
 
 main.dark .section__nav .nav__buttons{

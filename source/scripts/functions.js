@@ -8,6 +8,9 @@ function eventButtonMenu() {
 
     menuButton.onclick = () => navButtons.classList.toggle('hide')
     closeButton.onclick = () => navButtons.classList.toggle('hide')
+    $$('.nav__buttons ul a').forEach(item => {
+        item.onclick = _ => navButtons.classList.add('hide')
+    })
 }
 
 function eventButtonCV() {
@@ -69,11 +72,7 @@ function loadTheme(){
     }
 }
 
-function loadHiperLinks() {
-    $$('.nav__buttons ul a').forEach(item => {
-        item.onclick = _ => navButtons.classList.add('hide')
-    })
-    
+function loadHiperLinks() {    
     $('.facebook.no__link').onclick = _ => {
         openNewTab( "https://www.facebook.com/mardecera.priv/" );
     }
