@@ -10,21 +10,24 @@
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="stylesheet" href="./source/styles/icomoon.css">
         <link rel="stylesheet" href="./source/styles/general.css">
+        <link rel="stylesheet" href="./source/styles/dark.css">
         <title>Mardecera</title>
     </head>
     <body>
         <main>
             <nav class="section__nav">
                 <div class="nav__logo">
-                    <span class="icon__logo"></span>
+                    <a href="http://127.0.0.1:5501/index.html">
+                        <span class="icon__logo"></span>
+                    </a>
                 </div>
                 <div class="nav__buttons hide">
                     <span class="btn__close"><i class="fas fa-times"></i></span>
                     <ul>
-                        <li>Projects</li>
-                        <li>About Me</li>
-                        <li>Skills</li>
-                        <li>Contact Me</li>
+                        <li><a href="#id__projects" data-toggle='ggg'>Projects</a></li>
+                        <li><a href="#id__aboutme">About Me</a></li>
+                        <li><a href="#id__skills">Skills</a></li>
+                        <li><a href="#id__contactme">Contact Me</a></li>
                     </ul>
                     <div class="nav__buttons__extra">
                         <div class="nav__swithces">
@@ -36,23 +39,47 @@
                             </div>
                         </div>
                         <div class="nav__redes">
-                            <a href="" class="red__item">
-                                <i class="fab fa-facebook-f"></i><div class="tooltip">Facebook</div>
+                            <a class="red__item facebook no__link">
+                                <i class="fab fa-facebook-f"></i>
+                                <div class="tooltip">Facebook</div>
                             </a>
-                            <a href="" class="red__item">
-                                <i class="fab fa-instagram"></i><div class="tooltip">Instagram</div>
+                            <a
+                                href="https://www.instagram.com/mardecera/"
+                                class="red__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i class="fab fa-instagram"></i>
+                                <div class="tooltip">Instagram</div>
                             </a>
-                            <a href="" class="red__item">
-                                <i class="fab fa-linkedin-in"></i><div class="tooltip">LinkedIn</div>
+                            <a
+                                href="https://www.linkedin.com/in/jonathan-cervantes-alarcon/"
+                                class="red__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i class="fab fa-linkedin-in"></i>
+                                <div class="tooltip">LinkedIn</div>
                             </a>
-                            <a href="" class="red__item">
-                                <i class="fab fa-github"></i><div class="tooltip">Github</div>
+                            <a
+                                href="https://github.com/Mardecera"
+                                class="red__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i class="fab fa-github"></i>
+                                <div class="tooltip">Github</div>
                             </a>
-                            <a href="" class="red__item">
-                                <i class="fab fa-whatsapp"></i><div class="tooltip">(+51) &nbsp 977156464</div>
+                            <a class="red__item whatsApp no__link">
+                                <i class="fab fa-whatsapp"></i>
+                                <div class="tooltip">Send whatsApp</div>
                             </a>
-                            <a href="" class="red__item">
-                                <i class="far fa-envelope"></i><div class="tooltip">mardecera.personal@gmail.com</div>
+                            <a
+                                href="#"
+                                class="red__item"
+                            >
+                                <i class="far fa-envelope"></i>
+                                <div class="tooltip">mardecera.personal@gmail.com</div>
                             </a>
                         </div>
                     </div>
@@ -74,7 +101,7 @@
                     </figure>
                 </div>
             </section>
-            <section class='section__projects'>
+            <section class='section__projects' id="id__projects">
                 <div class="projects__container">
                     <div class="sub__title">Projects</div>
                     <div class="sub__carrousel">
@@ -127,7 +154,7 @@
                     </div>
                 </div>
             </section>
-            <section class='section__aboutme'>
+            <section class='section__aboutme' id="id__aboutme">
                 <div class="aboutme__container">
                     <div class="sub__title">About Me</div>
                     <div class="sub__description">
@@ -141,7 +168,7 @@
                     </div>
                 </div>
             </section>
-            <section class='section__skills'>
+            <section class='section__skills' id="id__skills">
                 <div class="skills__container">
                     <div class="sub__title">Skills</div>
                     <div class="sub__skills">
@@ -160,7 +187,7 @@
                     </div>
                 </div>
             </section>
-            <section class='section__contactme'>
+            <section class='section__contactme' id="id__contactme">
                 <div class="contactme__container">
                     <div class="sub__title">Contact Me</div>
                     <div class="sub__form">
@@ -187,5 +214,5 @@
             </section>
         </main>
     </body>
-    <script src="./source/scripts/functions.js"></script>
+    <script src="./source/scripts/main.js" type="module"></script>
 </html>

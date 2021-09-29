@@ -16,12 +16,12 @@
     --primary-color-black: #ee3680;
 
     --secondary-color: #223148;
-    --secondary-color-light: #2d3f58;
+    --secondary-color-light: #364c6b;
     --secondary-color-black: #1c2a3f;
 
-    --terceary-color: rgba(162, 172, 224);
-    --terceary-color-light: rgba(204, 213, 255, 0.5);
-    --terceary-color-black: rgb(162, 172, 231);
+    --terceary-color: #a2ace0;
+    --terceary-color-light: #c6d0ff;
+    --terceary-color-black: #8794d3;
 }
 
 body, input, textarea, span, button{
@@ -39,8 +39,12 @@ main{
 }
 
 ul{ list-style: none; }
-a{ text-decoration: none; }
-i { pointer-events: none; }
+i{ pointer-events: none; }
+a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
 
 /* 
 ===============================
@@ -77,12 +81,18 @@ i { pointer-events: none; }
     padding: var(--padding-h);
 }
 
+.section__nav .nav__buttons ul{
+    width: max-content;
+    margin: 0 auto;
+}
+
 .section__nav .nav__buttons ul li{
     padding: var(--padding-h);
     font-size: 1.3rem;
+    text-align: center;
 }
 
-.section__nav .nav__buttons ul li:hover,
+.section__nav .nav__buttons ul li a:hover,
 .section__nav .nav__buttons .btn__close:hover{
     color: var(--primary-color-black);
     cursor: pointer;
@@ -99,7 +109,6 @@ i { pointer-events: none; }
     display: flex;
     flex-direction: column;
     gap: 3em;
-    /* background-color: rgb(197, 215, 243); */
     padding: 2em;
     width: 100%;
 }
@@ -120,29 +129,29 @@ i { pointer-events: none; }
     border-radius: 100px;
     position: relative;
     cursor: pointer;
-    transition: .3s;
+    transition: color .2s ease-out, background-color .2s ease-out;
 }
 
 .section__nav .nav__buttons__extra .nav__swithces .nav__theme span::after{
+    position: absolute;
     content: "";
     width: 2.5em;
     height: 2.5em;
     background-color: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    position: absolute;
+    box-shadow: 0 0 20px rgba(66, 66, 66, 0.2);
+    border: 2px solid rgba(66, 66, 66, 0.1);
     border-radius: 100px;
     right: 0;
-    transition: 1s;
-    /* top: 0; */
+    transition: right .3s ease-out;
 }
 
 .section__nav .nav__buttons__extra .nav__swithces .nav__theme span.dark{
-    background-color: rgb(180, 193, 228);
+    background-color: var(--secondary-color-light);
+    color: white;
 }
 
 .section__nav .nav__buttons__extra .nav__swithces .nav__theme span.dark::after{
-    left: 0;
-    transition: 1s;
+    right: 50%;
 }
 
 .section__nav .nav__buttons__extra .nav__redes{
@@ -213,14 +222,9 @@ i { pointer-events: none; }
     text-align: center;
 }
 
-.section__main .sub__picture figure{
-    /* height: 70%; */
-}
-
 @media (min-width: 1000px){
     .section__main{
         padding: 5% 10% 0 10%;
-        /* height: 100vh; */
     }
 
     .section__main .sub__info{
@@ -313,7 +317,6 @@ i { pointer-events: none; }
     display: flex;
     overflow-x:hidden;
     overflow-y: hidden;
-    /* background-color: var(--primary-color); */
     background-color: var(--terceary-color-black);
 }
 
@@ -336,7 +339,6 @@ i { pointer-events: none; }
     position: absolute;
     width: 1.5rem;
     height: 1.5rem;
-    /* box-shadow: 0 0 20px var(--primary-color-black); */
     border: 1px solid var(--primary-color-black); 
     background-color: var(--primary-color);
     color: white;
@@ -433,6 +435,7 @@ i { pointer-events: none; }
     width: max-content;
     padding: 1em 2em;
     cursor: pointer;
+    border: none;
 }
 
 .section__contactme .sub__form .field input[type='submit']:hover{
@@ -460,7 +463,6 @@ figure{
 .section__aboutme,
 .section__skills,
 .section__contactme{
-    /* max-width: min(1000px, 100%); */
     width: 100%;
     padding: 5% 10%;
     margin: 0 auto;
@@ -473,7 +475,6 @@ figure{
 .skills__container,
 .contactme__container{
     max-width: min(500px, 100%);
-    /* width: 100%; */
     margin: 0 auto;
 }
 
@@ -484,16 +485,9 @@ figure{
     font-size: 1.5rem;
 }
 
-.section__projects .sub__title,
-.section__skills .sub__title{
-    /* color: #ffffff; */
-}
-
 .section__projects,
 .section__skills{
-    /* background-color: var(--primary-color); */
     background-color: rgba(162, 172, 224, 0.5);
-    /* box-shadow: inset 0 0 40px rgba(79, 87, 126, 0.2); */
 }
 
 button,

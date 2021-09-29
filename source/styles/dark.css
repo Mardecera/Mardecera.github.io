@@ -1,0 +1,72 @@
+:root{
+    --border-radius: .3em;
+    --padding-h: 1em;
+    --padding-w: 1em;
+
+    --primary-color: #FF4D93;
+    --primary-color-light: #fd5f9f;
+    --primary-color-black: #ee3680;
+
+    --secondary-color: #283b57;
+    --secondary-color-light: #425b7e;
+    --secondary-color-black: #1a2941;
+
+    --terceary-color: #a2ace0;
+    --terceary-color-light: #c6d0ff;
+    --terceary-color-black: #8794d3;
+}
+
+main.dark{
+    background-image:   radial-gradient(#5675a0 1px, transparent 1px),
+                        radial-gradient(#5675a0 1px, var(--secondary-color-light) 1px);
+    background-size: 34px 34px;
+    background-position: 0 0,17px 17px;
+}
+
+main.dark a,
+main.dark i,
+main.dark body,
+main.dark input,
+main.dark textarea,
+main.dark span,
+main.dark button{
+    color: var(--terceary-color-light);
+}
+
+main.dark .section__nav{
+    background-color: var(--secondary-color);
+}
+
+main.dark .section__nav .nav__buttons .btn__close:hover i{
+    color: var(--primary-color);
+}
+
+main.dark .section__nav .nav__buttons{
+    background-color: var(--secondary-color);
+}
+
+main.dark .section__nav .nav__buttons__extra .nav__redes .red__item{
+    border: 1px solid var(--terceary-color-light);
+}
+
+main.dark .section__nav .nav__buttons__extra .nav__redes .red__item:hover{
+    background-color: var(--terceary-color-light);
+}
+
+main.dark .section__nav .nav__buttons__extra .nav__redes .red__item:hover i{
+    color: var(--secondary-color);
+}
+
+main.dark .section__main .sub__info a{
+    background-color: var(--primary-color-black);
+}
+
+main.dark .section__projects .sub__carrousel .btn__left,
+main.dark .section__projects .sub__carrousel .btn__right{
+    background-color: var(--primary-color-black);
+}
+
+main.dark .section__aboutme,
+main.dark .section__contactme{
+    color: var(--terceary-color-light);
+}
