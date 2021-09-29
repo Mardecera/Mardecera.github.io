@@ -46,3 +46,19 @@ buttonLeft.onclick = () => {
 function currentPosX(item) {
     return parseInt(item.style.transform.slice(11)) || 0
 }
+
+const buttonTheme = $('#btn__theme')
+buttonTheme.onclick = _ => buttonTheme.classList.toggle('dark')
+
+// const tooltip = $('.tooltip')
+
+// tooltip.addEventListener('mouseover', event => {
+//     const title = event.target.getAttribute('data-title')
+//     const tooltipHTML = document.createElement('div')
+//     tooltipHTML.classList.add('tooltip')
+//     tooltipHTML.textContent = title
+//     tooltip.appendChild(tooltipHTML)
+//     tooltip.addEventListener('mouseout', _ => {
+//         tooltipHTML.remove()
+//     })
+// })

@@ -18,6 +18,10 @@
     --secondary-color: #223148;
     --secondary-color-light: #2d3f58;
     --secondary-color-black: #1c2a3f;
+
+    --terceary-color: rgba(162, 172, 224);
+    --terceary-color-light: rgba(204, 213, 255, 0.5);
+    --terceary-color-black: rgb(162, 172, 231);
 }
 
 body, input, textarea, span, button{
@@ -34,9 +38,9 @@ main{
     position: relative;
 }
 
-ul{
-    list-style: none;
-}
+ul{ list-style: none; }
+a{ text-decoration: none; }
+i { pointer-events: none; }
 
 /* 
 ===============================
@@ -91,6 +95,99 @@ ul{
     overflow: hidden;
 }
 
+.section__nav .nav__buttons .nav__buttons__extra{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    /* background-color: rgb(197, 215, 243); */
+    padding: 2em;
+    width: 100%;
+}
+
+.section__nav .nav__buttons .nav__swithces .nav__theme{
+    display: flex;
+    justify-content: center;
+}
+
+.section__nav .nav__buttons__extra .nav__swithces .nav__theme span{
+    background-color: orange;
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: min-content;
+    width: 5rem;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.section__nav .nav__buttons__extra .nav__swithces .nav__theme span::after{
+    content: "";
+    width: 2.5em;
+    height: 2.5em;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    border-radius: 100px;
+    right: 0;
+    transition: 1s;
+    /* top: 0; */
+}
+
+.section__nav .nav__buttons__extra .nav__swithces .nav__theme span.dark{
+    background-color: rgb(180, 193, 228);
+}
+
+.section__nav .nav__buttons__extra .nav__swithces .nav__theme span.dark::after{
+    left: 0;
+    transition: 1s;
+}
+
+.section__nav .nav__buttons__extra .nav__redes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.tooltip{
+    display: none;
+}
+
+.section__nav .nav__buttons__extra .nav__redes .red__item{
+    padding: 1em;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+}
+
+.section__nav .nav__buttons__extra .nav__redes .red__item:hover{
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.section__nav .nav__buttons__extra .nav__redes .red__item:hover .tooltip{
+    display: block !important;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    background-color: rgb(227, 236, 255);
+    padding: .5em .8em;
+    border-radius: var(--border-radius);
+    font-size: .8rem;
+    top: -3em;
+    color: rgba(0, 0, 0, 0.6);
+}
+
 /* 
 ==================================
             SECTION MAIN
@@ -103,11 +200,42 @@ ul{
     padding: 1em 1em 0 1em;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.section__main > div{
-    width: 100%;
+.section__main .sub__info{
+    max-width: min(700px, 100%);
     text-align: center;
+}
+
+.section__main .sub__picture{
+    max-width: min(700px, 100%);
+    text-align: center;
+}
+
+.section__main .sub__picture figure{
+    /* height: 70%; */
+}
+
+@media (min-width: 1000px){
+    .section__main{
+        padding: 5% 10% 0 10%;
+        /* height: 100vh; */
+    }
+
+    .section__main .sub__info{
+        text-align: left;
+        font-size: 1.7rem;
+    }
+
+    .section__main .sub__info .main__name{
+        font-size: 4rem !important;
+    }
+
+    .btn__a{
+        margin-top: 2rem !important;
+        display:inline-block !important;
+    }
 }
 
 .section__main .sub__info .main__name{
@@ -185,7 +313,8 @@ ul{
     display: flex;
     overflow-x:hidden;
     overflow-y: hidden;
-    background-color: var(--primary-color-black);
+    /* background-color: var(--primary-color); */
+    background-color: var(--terceary-color-black);
 }
 
 .section__projects .sub__carrousel .sub__items .sub__item{
@@ -207,7 +336,7 @@ ul{
     position: absolute;
     width: 1.5rem;
     height: 1.5rem;
-    box-shadow: 0 0 20px var(--primary-color-black);
+    /* box-shadow: 0 0 20px var(--primary-color-black); */
     border: 1px solid var(--primary-color-black); 
     background-color: var(--primary-color);
     color: white;
@@ -219,6 +348,11 @@ ul{
 
 .section__projects .sub__carrousel .btn__left{ left: -1.5em; }
 .section__projects .sub__carrousel .btn__right{ right: -1.5em; }
+
+.section__projects .sub__carrousel .btn__left:hover,
+.section__projects .sub__carrousel .btn__right:hover{
+    background-color: var(--primary-color-black);
+}
 
 /* 
 ==================================
@@ -326,24 +460,40 @@ figure{
 .section__aboutme,
 .section__skills,
 .section__contactme{
+    /* max-width: min(1000px, 100%); */
     width: 100%;
-    padding: 2rem 3rem;
+    padding: 5% 10%;
+    margin: 0 auto;
+}
+
+.section__nav{ padding: 2rem 3rem; }
+
+.projects__container,
+.aboutme__container,
+.skills__container,
+.contactme__container{
+    max-width: min(500px, 100%);
+    /* width: 100%; */
+    margin: 0 auto;
 }
 
 .sub__title{
     margin-bottom: 2rem;
     font-weight: 600;
     text-transform: uppercase;
+    font-size: 1.5rem;
 }
 
 .section__projects .sub__title,
 .section__skills .sub__title{
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 .section__projects,
 .section__skills{
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background-color: rgba(162, 172, 224, 0.5);
+    /* box-shadow: inset 0 0 40px rgba(79, 87, 126, 0.2); */
 }
 
 button,
