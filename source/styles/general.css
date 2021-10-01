@@ -226,8 +226,18 @@ a{
 }
 
 .section__main .sub__picture{
-    max-width: min(700px, 100%);
+    width: 30%;
     text-align: center;
+}
+
+@media (max-width: 400px){
+    .section__main .sub__picture{
+        width: 70%;
+    }
+}
+
+.section__main .sub__picture figure{
+    width: 100%;
 }
 
 @media (min-width: 1000px){
@@ -664,6 +674,8 @@ a{
 img{
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    object-position: bottom;
 }
 
 figure{
