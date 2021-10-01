@@ -119,7 +119,8 @@ a{
 }
 
 .section__nav .nav__buttons__extra .nav__swithces .nav__theme span{
-    background-color: orange;
+    /* background-color: orange; */
+    background-color: var(--secondary-color-light);
     padding: .5rem 1rem;
     display: flex;
     justify-content: space-between;
@@ -130,6 +131,7 @@ a{
     position: relative;
     cursor: pointer;
     transition: color .2s ease-out, background-color .2s ease-out;
+    color: white;
 }
 
 .section__nav .nav__buttons__extra .nav__swithces .nav__theme span::after{
@@ -141,17 +143,20 @@ a{
     box-shadow: 0 0 20px rgba(66, 66, 66, 0.2);
     border: 2px solid rgba(66, 66, 66, 0.1);
     border-radius: 100px;
-    right: 0;
-    transition: right .3s ease-out;
+    left: -.3em;
+    transition: left .3s ease-out;
 }
 
 .section__nav .nav__buttons__extra .nav__swithces .nav__theme span.dark{
-    background-color: var(--secondary-color-light);
-    color: white;
+    background-color: orange;
+}
+
+.section__nav .nav__buttons__extra .nav__swithces .nav__theme span.dark i{
+    color: var(--secondary-color-black);
 }
 
 .section__nav .nav__buttons__extra .nav__swithces .nav__theme span.dark::after{
-    right: 50%;
+    left: 50%;
 }
 
 .section__nav .nav__buttons__extra .nav__redes{
@@ -318,6 +323,7 @@ a{
     overflow-x:hidden;
     overflow-y: hidden;
     background-color: var(--terceary-color-black);
+    border: 1px solid var(--terceary-color-black);
 }
 
 .section__projects .sub__carrousel .sub__items .sub__item{
@@ -325,6 +331,57 @@ a{
     flex-shrink: 0;
     padding: 1rem 0;
     transition: .5s;
+    position: relative;
+}
+
+.section__projects .sub__carrousel .sub__items .sub__item .item__description{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0 20px rgba(39, 62, 104, 0.4);
+    transition: .5s ease-in-out;
+    overflow: hidden;
+    padding: 0 1.5em;
+    /* color: white; */
+}
+
+.section__projects .sub__carrousel .sub__items .sub__item .item__description > div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+
+.section__projects .sub__carrousel .sub__items .sub__item .item__description > div > div{
+    width: 100%;
+    height: max-content;
+}
+
+.section__projects .sub__carrousel .sub__item .item__description .desc__title{
+    font-weight: 700;
+}
+
+.section__projects .sub__carrousel .sub__item .item__description .desc__technologys{
+    display: flex;
+    gap: .4em;
+}
+
+.section__projects .sub__carrousel .sub__item .item__description .desc__technologys span{
+    color: white;
+    font-size: .7rem;
+    background-color: var(--secondary-color);
+    padding: .3em .6em;
+    width: max-content;
+    height: max-content;
+}
+
+.section__projects .sub__carrousel .sub__items .sub__item:hover .item__description{
+    height: 45%;
+    padding: 1.5em 1.5em;
+    overflow:visible ;
 }
 
 .section__projects .sub__carrousel .sub__items .sub__item figure{
@@ -387,10 +444,52 @@ a{
 =========================================
 */
 
+.section__contactme .contactme__container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.section__contactme .sub__title{
+    flex-grow: 2;
+    width: 100%;
+}
+
+.section__contactme .sub__form{
+    width: 100%;
+}
+
+.section__contactme .sub__picture{
+    margin: 0 auto;
+}
+
+@media (min-width: 600px){
+    .section__contactme .sub__form{
+        flex-grow: 1;
+        order: 3;
+        width: auto;
+    }
+    
+    .section__contactme .sub__picture{
+        order: 2;
+        width: 35%;
+        margin: 0;
+    }
+
+    .section__contactme .sub__picture figure{
+        width: 100%;
+    }
+}
+
+.section__contactme .sub__form{
+    padding: 1em;
+    background-color: #ced6fc;
+}
+
 .section__contactme .sub__form form{
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1em;    
 }
 
 .section__contactme .sub__form .field{
@@ -436,6 +535,7 @@ a{
     padding: 1em 2em;
     cursor: pointer;
     border: none;
+    border-radius: 0;
 }
 
 .section__contactme .sub__form .field input[type='submit']:hover{
@@ -474,12 +574,12 @@ figure{
 .aboutme__container,
 .skills__container,
 .contactme__container{
-    max-width: min(500px, 100%);
+    max-width: min(600px, 100%);
     margin: 0 auto;
 }
 
 .sub__title{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -506,6 +606,7 @@ textarea{
 
 textarea{
     height: 7rem;
+    resize: none;
 }
 
 .btn__a{
