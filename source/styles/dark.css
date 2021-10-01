@@ -31,6 +31,12 @@ main.dark .section__nav{
     background-color: var(--secondary-color-light);
 }
 
+main.dark .btn__menu .icon__bars .icon__bars__content span:nth-child(1),
+main.dark .btn__menu .icon__bars .icon__bars__content span:nth-child(2),
+main.dark .btn__menu .icon__bars .icon__bars__content span:nth-child(3){
+    background-color: var(--terceary-color-light);
+}
+
 main.dark .section__nav .nav__buttons ul li a:hover,
 main.dark .section__nav .nav__buttons .btn__close:hover i{
     color: var(--primary-color-light);
@@ -64,4 +70,11 @@ main.dark .section__projects .sub__carrousel .btn__right{
 main.dark .section__aboutme,
 main.dark .section__contactme{
     color: var(--terceary-color-light);
+}
+
+main.dark .section__aboutme .aboutme__container .sub__description p{
+    color: var(--secondary-color-light);
+}
+main.dark .section__contactme .sub__form .field label{
+    color: #7c96bd;
 }

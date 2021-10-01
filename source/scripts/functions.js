@@ -3,11 +3,12 @@ const $$ = query => document.querySelectorAll(query)
 
 function eventButtonMenu() {
     const menuButton = $('.btn__menu')
-    const closeButton = $('.btn__close')
     const navButtons = $('.nav__buttons')
 
-    menuButton.onclick = () => navButtons.classList.toggle('hide')
-    closeButton.onclick = () => navButtons.classList.toggle('hide')
+    menuButton.onclick = () => {
+        navButtons.classList.toggle('hide')
+        menuButton.classList.toggle('click')
+    }
     $$('.nav__buttons ul a').forEach(item => {
         item.onclick = _ => navButtons.classList.add('hide')
     })
