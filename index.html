@@ -1,337 +1,351 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="author" content="mardera">
-        <meta name="copyright" content="mardera">
-        <meta name="robots" content="index">
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="./styles/icomoon.css">
-        <link rel="stylesheet" href="./styles/general.css">
-        <link rel="stylesheet" href="./styles/dark.css">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mardecera</title>
+        <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="./styles/icomoon.css" />
+        <link rel="stylesheet" href="./styles/general.css" />
+        <link rel="stylesheet" href="./styles/dark.css" />
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
+        <script src="./scripts/functions.js" type="module" defer></script>
     </head>
     <body>
         <main>
-            <nav class="section__nav">
+            <nav id="section__nav">
                 <div class="nav__logo">
                     <a href="."><span class="icon__logo"></span></a>
                 </div>
-                <div class="nav__buttons hide">
+                <div class="nav__sections hidden">
+                    <div class="bar__close"><i class="fas fa-times"></i></div>
                     <ul>
-                        <li><a href="#id__projects">Projects</a></li>
-                        <li><a href="#id__aboutme">About Me</a></li>
-                        <li><a href="#id__skills">Skills</a></li>
-                        <li><a href="#id__contactme">Contact Me</a></li>
+                        <li><a href=".">Home</a></li>
+                        <li><a href="#section__aboutme">About Me</a></li>
+                        <li><a href="#section__projects">Projects</a></li>
+                        <li><a href="#section__skills">Skills</a></li>
+                        <li><a href="#section__contactme">Contact Me</a></li>
+                        <li>
+                            <span id="switch__theme">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </span>
+                        </li>
+                        <script></script>
                     </ul>
-                    <div class="nav__buttons__extra">
-                        <div class="nav__swithces">
-                            <div class="nav__theme">
-                                <span id="btn__theme">
-                                    <i class="fas fa-sun"></i>
-                                    <i class="fas fa-moon"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="nav__redes">
-                            <a class="red__item facebook no__link">
-                                <i class="fab fa-facebook-f"></i>
-                                <div class="tooltip">Facebook</div>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/mardecera/"
-                                class="red__item"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i class="fab fa-instagram"></i>
-                                <div class="tooltip">Instagram</div>
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/jonathan-cervantes-alarcon/"
-                                class="red__item"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i class="fab fa-linkedin-in"></i>
-                                <div class="tooltip">LinkedIn</div>
-                            </a>
-                            <a
-                                href="https://github.com/Mardecera"
-                                class="red__item"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i class="fab fa-github"></i>
-                                <div class="tooltip">Github</div>
-                            </a>
-                            <a class="red__item whatsApp no__link">
-                                <i class="fab fa-whatsapp"></i>
-                                <div class="tooltip">Send whatsApp</div>
-                            </a>
-                            <a
-                                href="#"
-                                class="red__item"
-                            >
-                                <i class="far fa-envelope"></i>
-                                <div class="tooltip">mardecera.personal@gmail.com</div>
-                            </a>
-                        </div>
-                    </div>
                 </div>
-                <div class="btn__menu">
-                    <!-- <span class="icon__barmenu"></span> -->
-                    <div class="icon__bars">
-                        <div class="icon__bars__content">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
+                <div class="nav__bar">
+                    <i class="fas fa-bars"></i>
                 </div>
+                <script></script>
             </nav>
-            <section class='section__main'>
-                <div class="sub__info">
-                    <span class="main__salute">Hi, I'm</span><br>
-                    <span class="main__name">Jonathan<br>Cervantes Alarcon</span><br>
-                    <span class="main__ocupation">Junior <span class="highlight">frontend</span> developer</span><br>
-                    <a href="./docs/curriculum.pdf" download="cv.pdf" class="btn__a">Curriculum<span><i class="fas fa-arrow-down"></i></span></a>
-                </div>
-                <div class="sub__picture">
-                    <figure>
-                        <img loading='lazy' decoding='async' src="./images/_picture_01.png" alt="_me">
+            <section id="section__main">
+                <div class="container">
+                    <div class="main__info">
+                        <p class="info__presentation">Hi, I'm</p>
+                        <p class="info__name">jonathan cervantes alarcon</p>
+                        <p class="info__puesto">
+                            Junior <span>frontend</span> developer
+                        </p>
+                    </div>
+                    <figure class="main__figure">
+                        <img
+                            src="./images/_profile/_profile01.png"
+                            alt="profile"
+                            loading="lazy"
+                            decoding="async"
+                        />
                     </figure>
                 </div>
+                <div class="redes">
+                    <button class="item whatsApp no__link">
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                    <div class="item">
+                        <a
+                            href="https://www.linkedin.com/in/jonathan-cervantes-alarcon/"
+                        >
+                            <i class="fab fa-linkedin-in"></i
+                        ></a>
+                    </div>
+                    <div class="item">
+                        <a href="https://github.com/Mardecera"
+                            ><i class="fab fa-github"></i
+                        ></a>
+                    </div>
+                </div>
             </section>
-            <section class='section__projects' id="id__projects">
+            <section id="section__aboutme">
+                <div class="title">About Me</div>
+                <div class="container">
+                    <figure class="aboutme__figure">
+                        <img
+                            src="./images/_profile/_profile02.png"
+                            alt="profile02"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </figure>
+                    <div class="aboutme__info">
+                        <div class="info__text">
+                            <p>
+                                I’m an enthusiastic person to learn new ways of
+                                programming, proactive and energetic. I have
+                                developed some web pages from scratch using only
+                                <code>css</code>, <code>html</code> and
+                                <code>js</code>, without frameworks; but
+                                <code>React.js</code> is really getting me
+                                excited.
+                            </p>
+                        </div>
+                        <div class="info__curriculum">
+                            <a
+                                href="./docs/curriculum.pdf"
+                                download="curriculum"
+                            >
+                                Curriculum <i class="fas fa-file-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section__projects">
+                <div class="title">Projects</div>
                 <div class="projects__container">
-                    <div class="sub__title">Projects</div>
-                    <div class="sub__carrousel">
-                        <div class="sub__items">
-                            <div class="sub__item">
-                                <a href="https://wannsay.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                    <figure>
-                                        <img loading='lazy' decoding='async' src="./images/_compressed/_projects_1.png" alt="_projects_1">
-                                    </figure>
-                                </a>
-                                <div class="item__description">
-                                    <div>
-                                        <div class="desc__title">WannSay</div>
-                                        <div class="desc__content">
-                                            <p>
-                                                Sitio que guardar algunos pensamientos.
-                                            </p>
-                                        </div>
-                                        <div class="desc__technologys">
-                                            <span>JS</span><span>CSS</span><span>HTML</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sub__item">
-                                <a href="https://vettapp.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                    <figure>
-                                        <img loading='lazy' decoding='async' src="./images/_compressed/_projects_2.png" alt="_projects_2">
-                                    </figure>
-                                </a>
-                                <div class="item__description">
-                                    <div>
-                                        <div class="desc__title">VettApp</div>
-                                        <div class="desc__content">
-                                            <p>
-                                                Sitio para crear citas.
-                                            </p>
-                                        </div>
-                                        <div class="desc__technologys">
-                                            <span>JS</span><span>CSS</span><span>HTML</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sub__item">
-                                <a href="https://crmcrud.netlify.app" target="_blank" rel="noopener noreferrer">
-                                    <figure>
-                                        <img loading='lazy' decoding='async' src="./images/_compressed/_projects_4.png" alt="_projects_4">
-                                    </figure>
-                                </a>
-                                <div class="item__description">
-                                    <div>
-                                        <div class="desc__title">CRM Crud</div>
-                                        <div class="desc__content">
-                                            <p>
-                                                Sitio para registrar empleados.
-                                            </p>
-                                        </div>
-                                        <div class="desc__technologys">
-                                            <span>JS</span><span>CSS</span><span>HTML</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sub__item">
-                                <a href="https://lysear.netlify.app" target="_blank" rel="noopener noreferrer">
-                                    <figure>
-                                        <img loading='lazy' decoding='async' src="./images/_compressed/_projects_5.png" alt="_projects_5">
-                                    </figure>
-                                </a>
-                                <div class="item__description">
-                                    <div>
-                                        <div class="desc__title">Lysear</div>
-                                        <div class="desc__content">
-                                            <p>
-                                                Sitio para buscar letras de canciones.
-                                            </p>
-                                        </div>
-                                        <div class="desc__technologys">
-                                            <span>JS</span><span>CSS</span><span>HTML</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sub__item">
-                                <a href="https://geneword.netlify.app" target="_blank" rel="noopener noreferrer">
-                                    <figure>
-                                        <img loading='lazy' decoding='async' src="./images/_compressed/_projects_6.png" alt="_projects_6">
-                                    </figure>
-                                </a>
-                                <div class="item__description">
-                                    <div>
-                                        <div class="desc__title">GeneWord</div>
-                                        <div class="desc__content">
-                                            <p>
-                                                Sitio para generar contraseñas desde 8 a 24 caracteres.
-                                            </p>
-                                        </div>
-                                        <div class="desc__technologys">
-                                            <span>JS</span><span>CSS</span><span>HTML</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sub__item">
-                                <a href="https://currweath.netlify.app" target="_blank" rel="noopener noreferrer">
-                                    <figure>
-                                        <img loading='lazy' decoding='async' src="./images/_compressed/_projects_7.png" alt="_projects_7">
-                                    </figure>
-                                </a>
-                                <div class="item__description">
-                                    <div>
-                                        <div class="desc__title">CurrWeath</div>
-                                        <div class="desc__content">
-                                            <p>
-                                                Sitio para consultar el clima en diferentes ciudades del mundo.
-                                            </p>
-                                        </div>
-                                        <div class="desc__technologys">
-                                            <span>JS</span><span>CSS</span><span>HTML</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sub__item">
-                                <a href="https://picser.netlify.app" target="_blank" rel="noopener noreferrer">
-                                    <figure>
-                                        <img loading='lazy' decoding='async' src="./images/_compressed/_proyect_03.png" alt="_projects_3">
-                                    </figure>
-                                </a>
-                                <div class="item__description">
-                                    <div>
-                                        <div class="desc__title">PicSer</div>
-                                        <div class="desc__content">
-                                            <p>
-                                                Sitio para buscar imagenes.
-                                            </p>
-                                        </div>
-                                        <div class="desc__technologys">
-                                            <span>JS</span><span>CSS</span><span>HTML</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="btn__left"><i class="fas fa-angle-left"></i></button>
-                        <button class="btn__right"><i class="fas fa-angle-right"></i></button>
-                    </div>
-                    <div class="sub__info">
-                        Some of the small applications I have made so far, using mostly pure js, as well as fetch API and REST API.
-                    </div>
-                </div>
-            </section>
-            <section class='section__aboutme' id="id__aboutme">
-                <div class="aboutme__container">
-                    <div class="sub__title">About Me</div>
-                    <div class="sub__description">
-                        <p>
-                            I’m an enthusiastic person to learn
-                            new ways of programming, proactive
-                            and energetic. I have developed
-                            some web pages from scratch using
-                            only css, html and js, without
-                            frameworks; but React.js is really
-                            getting me excited.
-                        </p>
+                    <div class="project__item">
                         <figure>
-                            <img src="./images/_picture_02.png" alt="aboutme__picture">
+                            <img
+                                src="./images/_screenApps/_screenshootApp04.png"
+                                alt=""
+                            />
                         </figure>
+                        <div class="item__info">
+                            <span class="info__title">Currweath</span>
+                            <span class="info__tecnologies">
+                                <span>JS</span><span>CSS</span><span>HTML</span>
+                            </span>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section class='section__skills' id="id__skills">
-                <div class="skills__container">
-                    <div class="sub__title">Skills</div>
-                    <div class="sub__skills">
-                        <div class="sub__items">
-                            <div class="sub__item">
-                                <i class="fab fa-js-square"></i>
-                                <span>JS</span>
-                            </div>
-                            <div class="sub__item">
-                                <i class="fab fa-html5"></i>
-                                <span>HTML</span>
-                            </div>
-                            <div class="sub__item">
-                                <i class="fab fa-css3-alt"></i>
-                                <span>CSS</span>
-                            </div>
-                            <div class="sub__item">
-                                <i class="fab fa-github-square"></i>
-                                <span>GIT</span>
-                            </div>
-                            <div class="sub__item">
-                                <i class="fab fa-figma"></i>
-                                <span>FIGMA</span>
-                            </div>
-                            <div class="sub__item">
-                                <i class="fab fa-react"></i>
-                                <span>REACT</span>
-                            </div>
+                    <div class="project__item">
+                        <figure>
+                            <img
+                                src="./images/_screenApps/_screenshootApp01.png"
+                                alt=""
+                            />
+                        </figure>
+                        <div class="item__info">
+                            <span class="info__title">Lysear</span>
+                            <span class="info__tecnologies">
+                                <span>JS</span><span>CSS</span><span>HTML</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project__item">
+                        <figure>
+                            <img
+                                src="./images/_screenApps/_screenshootApp02.png"
+                                alt=""
+                            />
+                        </figure>
+                        <div class="item__info">
+                            <span class="info__title">CRM</span>
+                            <span class="info__tecnologies">
+                                <span>JS</span><span>CSS</span><span>HTML</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project__item">
+                        <figure>
+                            <img
+                                src="./images/_screenApps/_screenshootApp03.png"
+                                alt=""
+                            />
+                        </figure>
+                        <div class="item__info">
+                            <span class="info__title">Geneword</span>
+                            <span class="info__tecnologies">
+                                <span>JS</span><span>CSS</span><span>HTML</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project__item">
+                        <figure>
+                            <img
+                                src="./images/_screenApps/_screenshootApp05.png"
+                                alt=""
+                            />
+                        </figure>
+                        <div class="item__info">
+                            <span class="info__title">Picser</span>
+                            <span class="info__tecnologies">
+                                <span>JS</span><span>CSS</span><span>HTML</span>
+                            </span>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class='section__contactme' id="id__contactme">
-                <div class="contactme__container">
-                    <div class="sub__title">Contact Me</div>
-                    <div class="sub__form">
-                        <form action="https://formsubmit.co/mardecera.personal@gmail.com" method="POST">
-                            <div class="field">
-                                <input type="email" id="email" name='email' placeholder=" " required>
-                                <label for="email">E-mail</label>
-                            </div>
-                            <div class="field">
-                                <textarea name='message' id="message" placeholder=" " required></textarea>
-                                <label for="message">Message</label>
-                            </div>
-                            <div class="field">
-                                <input type="submit" value="Send">
-                            </div>
-                        </form>
+            <section id="section__skills">
+                <div class="title">Skills</div>
+                <div class="skills__container">
+                    <div class="skill__frontend">
+                        <div class="skill__tab">
+                            <span>Frontend</span>
+                            <span><i class="fas fa-angle-down"></i></span>
+                        </div>
+                        <div class="skill__details">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="skill__item" id="skill__js">
+                                        <td class="skill__name">JS</td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
+                                        <td class="skill__percent">80%</td>
+                                    </tr>
+                                    <tr class="skill__item" id="skill__css">
+                                        <td class="skill__name">CSS</td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
+                                        <td class="skill__percent">30%</td>
+                                    </tr>
+                                    <tr class="skill__item" id="skill__html">
+                                        <td class="skill__name">HTML</td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
+                                        <td class="skill__percent">20%</td>
+                                    </tr>
+                                    <tr class="skill__item" id="skill__react">
+                                        <td class="skill__name">REACT.JS</td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
+                                        <td class="skill__percent">10%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
+                    <div class="skill__backend">
+                        <div class="skill__tab">
+                            <span>Backend</span>
+                            <span><i class="fas fa-angle-down"></i></span>
+                        </div>
+                        <div class="skill__details hidden">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="skill__item" id="skill__js">
+                                        <td class="skill__name">PYTHON</td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
+                                        <td class="skill__percent">30%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="skill__desing">
+                        <div class="skill__tab">
+                            <span>Desing</span>
+                            <span><i class="fas fa-angle-down"></i></span>
+                        </div>
+                        <div class="skill__details hidden">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="skill__item" id="skill__js">
+                                        <td class="skill__name">PHOTOSHOP</td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
+                                        <td class="skill__percent">30%</td>
+                                    </tr>
+                                    <tr class="skill__item" id="skill__js">
+                                        <td class="skill__name">ILLUSTRATOR</td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
+                                        <td class="skill__percent">30%</td>
+                                    </tr>
+                                    <tr class="skill__item" id="skill__js">
+                                        <td class="skill__name">FIGMA</td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
+                                        <td class="skill__percent">30%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <script></script>
                 </div>
             </section>
+            <footer>
+                <form action="" class="footer__contactme">
+                    <div class="contactme__title">Contact me</div>
+                    <div class="contactme__inputs">
+                        <input type="text" placeholder="Your e-mail" />
+                        <textarea
+                            type="text"
+                            placeholder="Your message"
+                        ></textarea>
+                    </div>
+                    <div class="contactme__submit">
+                        <button type="submit">
+                            Send <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </footer>
+            <button id="web__top">
+                <i class="fas fa-long-arrow-up"></i>
+            </button>
+            <script></script>
         </main>
     </body>
-    <script src="./scripts/main.js" type="module"></script>
 </html>
