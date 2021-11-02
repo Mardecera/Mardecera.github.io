@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mardecera</title>
-        <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="./styles/icomoon.css">
-        <link rel="stylesheet" href="./styles/general.css">
-        <link rel="stylesheet" href="./styles/dark.css">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <script src="./scripts/main.js" type="module" defer></script>
+        <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="./styles/icomoon.css" />
+        <link rel="stylesheet" href="./styles/general.css" />
+        <link rel="stylesheet" href="./styles/dark.css" />
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
+        <script src="./scripts/functions.js" type="module" defer></script>
     </head>
     <body>
         <main>
@@ -32,47 +37,47 @@
                                 <i class="fas fa-moon"></i>
                             </span>
                         </li>
-                        <script>
-                            const $ = query => document.querySelector(query)
-                            $('#switch__theme').onclick = () => {
-                                $('#switch__theme').classList.toggle('active')
-                            }
-                            $('.bar__close').onclick = () => {
-                                $('.nav__sections').classList.toggle('hidden')
-                            }
-                        </script>
+                        <script></script>
                     </ul>
                 </div>
                 <div class="nav__bar">
                     <i class="fas fa-bars"></i>
                 </div>
-                <script>
-                    $('.nav__bar').onclick = () => {
-                        $('.nav__sections').classList.toggle('hidden')
-                    }
-                </script>
+                <script></script>
             </nav>
             <section id="section__main">
                 <div class="container">
                     <div class="main__info">
                         <p class="info__presentation">Hi, I'm</p>
                         <p class="info__name">jonathan cervantes alarcon</p>
-                        <p class="info__puesto">Junior <span>frontend</span> developer</p>
+                        <p class="info__puesto">
+                            Junior <span>frontend</span> developer
+                        </p>
                     </div>
                     <figure class="main__figure">
-                        <img src="./images/_profile/_profile01.png" alt="profile" loading="lazy" decoding="async">
+                        <img
+                            src="./images/_profile/_profile01.png"
+                            alt="profile"
+                            loading="lazy"
+                            decoding="async"
+                        />
                     </figure>
                 </div>
                 <div class="redes">
+                    <button class="item whatsApp no__link">
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
                     <div class="item">
-                        <a href=""><i class="fab fa-whatsapp"></i></a>
+                        <a
+                            href="https://www.linkedin.com/in/jonathan-cervantes-alarcon/"
+                        >
+                            <i class="fab fa-linkedin-in"></i
+                        ></a>
                     </div>
                     <div class="item">
-                        <a href="https://www.linkedin.com/in/jonathan-cervantes-alarcon/">
-                            <i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="item">
-                        <a href="https://github.com/Mardecera"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/Mardecera"
+                            ><i class="fab fa-github"></i
+                        ></a>
                     </div>
                 </div>
             </section>
@@ -80,14 +85,30 @@
                 <div class="title">About Me</div>
                 <div class="container">
                     <figure class="aboutme__figure">
-                        <img src="./images/_profile/_profile02.png" alt="profile02" loading="lazy" decoding="async">
+                        <img
+                            src="./images/_profile/_profile02.png"
+                            alt="profile02"
+                            loading="lazy"
+                            decoding="async"
+                        />
                     </figure>
                     <div class="aboutme__info">
                         <div class="info__text">
-                            <p>I’m an enthusiastic person to learn new ways of programming, proactive and energetic. I have developed some web pages from scratch using only css, html and js, without frameworks; but React.js is really getting me excited.</p>
+                            <p>
+                                I’m an enthusiastic person to learn new ways of
+                                programming, proactive and energetic. I have
+                                developed some web pages from scratch using only
+                                <code>css</code>, <code>html</code> and
+                                <code>js</code>, without frameworks; but
+                                <code>React.js</code> is really getting me
+                                excited.
+                            </p>
                         </div>
                         <div class="info__curriculum">
-                            <a href="./docs/curriculum.pdf" download="curriculum">
+                            <a
+                                href="./docs/curriculum.pdf"
+                                download="curriculum"
+                            >
                                 Curriculum <i class="fas fa-file-download"></i>
                             </a>
                         </div>
@@ -99,7 +120,10 @@
                 <div class="projects__container">
                     <div class="project__item">
                         <figure>
-                            <img src="./images/_screenApps/_screenshootApp04.png" alt="">
+                            <img
+                                src="./images/_screenApps/_screenshootApp04.png"
+                                alt=""
+                            />
                         </figure>
                         <div class="item__info">
                             <span class="info__title">Currweath</span>
@@ -110,7 +134,10 @@
                     </div>
                     <div class="project__item">
                         <figure>
-                            <img src="./images/_screenApps/_screenshootApp01.png" alt="">
+                            <img
+                                src="./images/_screenApps/_screenshootApp01.png"
+                                alt=""
+                            />
                         </figure>
                         <div class="item__info">
                             <span class="info__title">Lysear</span>
@@ -121,7 +148,10 @@
                     </div>
                     <div class="project__item">
                         <figure>
-                            <img src="./images/_screenApps/_screenshootApp02.png" alt="">
+                            <img
+                                src="./images/_screenApps/_screenshootApp02.png"
+                                alt=""
+                            />
                         </figure>
                         <div class="item__info">
                             <span class="info__title">CRM</span>
@@ -132,7 +162,10 @@
                     </div>
                     <div class="project__item">
                         <figure>
-                            <img src="./images/_screenApps/_screenshootApp03.png" alt="">
+                            <img
+                                src="./images/_screenApps/_screenshootApp03.png"
+                                alt=""
+                            />
                         </figure>
                         <div class="item__info">
                             <span class="info__title">Geneword</span>
@@ -143,7 +176,10 @@
                     </div>
                     <div class="project__item">
                         <figure>
-                            <img src="./images/_screenApps/_screenshootApp05.png" alt="">
+                            <img
+                                src="./images/_screenApps/_screenshootApp05.png"
+                                alt=""
+                            />
                         </figure>
                         <div class="item__info">
                             <span class="info__title">Picser</span>
@@ -166,28 +202,46 @@
                             <table>
                                 <thead>
                                     <tr>
-                                        <th></th><th></th><th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="skill__item" id="skill__js">
                                         <td class="skill__name">JS</td>
-                                        <td class="skill__line"><span><span></span><span></span></span></td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
                                         <td class="skill__percent">80%</td>
                                     </tr>
                                     <tr class="skill__item" id="skill__css">
                                         <td class="skill__name">CSS</td>
-                                        <td class="skill__line"><span><span></span><span></span></span></td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
                                         <td class="skill__percent">30%</td>
                                     </tr>
                                     <tr class="skill__item" id="skill__html">
                                         <td class="skill__name">HTML</td>
-                                        <td class="skill__line"><span><span></span><span></span></span></td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
                                         <td class="skill__percent">20%</td>
                                     </tr>
                                     <tr class="skill__item" id="skill__react">
                                         <td class="skill__name">REACT.JS</td>
-                                        <td class="skill__line"><span><span></span><span></span></span></td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
                                         <td class="skill__percent">10%</td>
                                     </tr>
                                 </tbody>
@@ -203,13 +257,19 @@
                             <table>
                                 <thead>
                                     <tr>
-                                        <th></th><th></th><th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="skill__item" id="skill__js">
                                         <td class="skill__name">PYTHON</td>
-                                        <td class="skill__line"><span><span></span><span></span></span></td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
                                         <td class="skill__percent">30%</td>
                                     </tr>
                                 </tbody>
@@ -225,62 +285,55 @@
                             <table>
                                 <thead>
                                     <tr>
-                                        <th></th><th></th><th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="skill__item" id="skill__js">
                                         <td class="skill__name">PHOTOSHOP</td>
-                                        <td class="skill__line"><span><span></span><span></span></span></td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
                                         <td class="skill__percent">30%</td>
                                     </tr>
                                     <tr class="skill__item" id="skill__js">
                                         <td class="skill__name">ILLUSTRATOR</td>
-                                        <td class="skill__line"><span><span></span><span></span></span></td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
                                         <td class="skill__percent">30%</td>
                                     </tr>
                                     <tr class="skill__item" id="skill__js">
                                         <td class="skill__name">FIGMA</td>
-                                        <td class="skill__line"><span><span></span><span></span></span></td>
+                                        <td class="skill__line">
+                                            <span
+                                                ><span></span><span></span
+                                            ></span>
+                                        </td>
                                         <td class="skill__percent">30%</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <script>
-                        // const $ = item => document.querySelector(item)
-                        const $$ = item => document.querySelectorAll(item)
-                        // $('.skill__frontend .skill__tab').onclick = () => {
-                        //     $$('.skill__details').forEach(detail => {
-                        //         if(!detail.classList.contains('hidden')){
-                        //             detail.classList.add('hidden')
-                        //         }
-                        //     })
-                        //     $('.skill__frontend .skill__details').classList.toggle('hidden')
-                        // }
-                        // $('.skill__backend .skill__tab').onclick = () => {
-                        // }
-                        // $('.skill__desing .skill__tab').onclick = () => {
-                        // }
-                        $('.skill__frontend .skill__tab').onclick = () => {
-                            $('.skill__frontend .skill__details').classList.toggle('hidden')
-                        }
-                        $('.skill__backend .skill__tab').onclick = () => {
-                            $('.skill__backend .skill__details').classList.toggle('hidden')
-                        }
-                        $('.skill__desing .skill__tab').onclick = () => {
-                            $('.skill__desing .skill__details').classList.toggle('hidden')
-                        }
-                    </script>
+                    <script></script>
                 </div>
             </section>
             <footer>
                 <form action="" class="footer__contactme">
                     <div class="contactme__title">Contact me</div>
                     <div class="contactme__inputs">
-                        <input type="text" placeholder="Your e-mail">
-                        <textarea type="text" placeholder="Your message"></textarea>
+                        <input type="text" placeholder="Your e-mail" />
+                        <textarea
+                            type="text"
+                            placeholder="Your message"
+                        ></textarea>
                     </div>
                     <div class="contactme__submit">
                         <button type="submit">
@@ -289,9 +342,10 @@
                     </div>
                 </form>
             </footer>
-            <div id="web__top">
+            <button id="web__top">
                 <i class="fas fa-long-arrow-up"></i>
-            </div>
+            </button>
+            <script></script>
         </main>
     </body>
 </html>

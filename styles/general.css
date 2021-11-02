@@ -42,6 +42,19 @@ ul{
     list-style: none;
 }
 
+code{
+    display: inline-flex;
+    background-color: rgba(233, 233, 233, 0.9);
+    border-radius: .3em;
+    padding: 1px .3em;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
 #section__nav{
     width: 100%;
     display: flex;
@@ -66,14 +79,13 @@ ul{
     height: 100vh;
     background-color: white;
     z-index: 2;
-    transition: width .5s ease-in-out;
     padding: 2em;
     text-align: center;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    transition: transform .5s ease-in-out;
 }
 
 #section__nav .nav__sections .bar__close{
@@ -95,9 +107,7 @@ ul{
 }
 
 #section__nav .nav__sections.hidden{
-    width: 0%;
-    overflow: hidden;
-    padding: 0;
+    transform: translate(-100%);
 }
 
 #section__main{
@@ -186,8 +196,8 @@ ul{
 ============================================ 
 */
 #section__aboutme .aboutme__figure{
-    padding: 0em 2em;
-    width: 100%;
+    padding: 0em 1em;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -204,6 +214,7 @@ ul{
 
 #section__aboutme .aboutme__info .info__text{
     padding: 2em 0em;
+    line-height: 1.5em;
 }
 
 #section__aboutme .aboutme__info .info__curriculum a{
@@ -330,7 +341,7 @@ ul{
     padding: 1em 1em;
     border-bottom-left-radius: .3em;
     border-bottom-right-radius: .3em;
-    transition: all .5s ease-out;
+    transition: all .3s ease-out;
     overflow: hidden;
 }
 
@@ -525,7 +536,6 @@ textarea{
 
 #web__top{
     background-color: var(--secondary-color);
-    /* padding: 1.2em; */
     width: 2.5em;
     height: 2.5em;
     border-radius: .3em;
@@ -537,6 +547,8 @@ textarea{
     top: 90vh;
     right: 1em;
     opacity: .7;
+    outline: none;
+    border: none;
     cursor: pointer;
 }
 
