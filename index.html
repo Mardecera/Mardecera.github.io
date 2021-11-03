@@ -367,13 +367,24 @@
                 </div>
             </section>
             <footer>
-                <form action="" class="footer__contactme">
+                <form
+                    action="https://formsubmit.co/mardecera.personal@gmail.com"
+                    method="post"
+                    class="footer__contactme"
+                >
                     <div class="contactme__title">Contact me</div>
                     <div class="contactme__inputs">
-                        <input type="text" placeholder="Your e-mail" />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Your e-mail"
+                            required
+                        />
                         <textarea
                             type="text"
+                            name="message"
                             placeholder="Your message"
+                            required
                         ></textarea>
                     </div>
                     <div class="contactme__submit">
