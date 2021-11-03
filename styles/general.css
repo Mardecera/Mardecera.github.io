@@ -71,6 +71,12 @@ button{
     cursor: pointer;
 }
 
+@media (min-width: 768px) {
+    #section__nav .nav__bar{
+        display: none;
+    }
+}
+
 #section__nav .nav__sections{
     position: fixed;
     top: 0;
@@ -110,14 +116,85 @@ button{
     transform: translate(-100%);
 }
 
+@media (min-width: 1100px){
+    #section__nav{
+        padding: 2rem 4rem;
+    }
+    #section__nav .nav__sections ul{
+        display: flex;
+        flex-direction: row;
+        /* width: 100%; */
+        gap: 2rem;
+    }
+    #section__nav .nav__sections ul li{
+        width: max-content;
+    }
+    #section__nav .nav__sections .bar__close{
+        display: none;
+    }
+    #section__nav .nav__sections{
+        position: inherit;
+        width: max-content;
+        height: max-content;
+        overflow:visible;
+    }
+    #section__nav .nav__sections.hidden{
+        width: max-content;
+        transform: none;
+        padding: 0;
+    }
+}
+
 #section__main{
     background-color: #eeeeee;
     position: relative;
 }
 
+#section__main .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #section__main .main__info{
     color: var(--secondary-color);
     padding: 2em;
+}
+
+@media (min-width: 790px){
+    #section__main .main__info{
+        width: 70%;
+    }
+}
+
+@media (min-width: 1100px){
+    #section__main{
+        display: flex;
+        justify-content: center;
+    }
+    #section__main .main__info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 4rem;
+    }
+    #section__main .main__info p{
+        width: max-content;
+    }
+    #section__main .main__info .info__name{
+        max-width: min-content;
+        text-align: right;
+    }
+    #section__main .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #section__main .main__figure{
+        width: 100%;
+    }
 }
 
 #section__main .main__info p{
@@ -139,19 +216,78 @@ button{
 }
 
 #section__main .main__info .info__puesto span{
-    color: var(--primary-color);
-    font-weight: 700;
+    color: white;
+    background-color: var(--primary-color);
+    padding: .1em .3em;
+    border-radius: .3em;
+    font-size: .9rem;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section__main .main__info .info__puesto span:after
+#section__main .main__info .info__puesto span:before {
+    position: absolute;
+}
+
+#section__main .main__info .info__puesto span:after{
+    content: ">";
+    margin-left: 2px;
+}
+
+#section__main .main__info .info__puesto span:before{
+    content: "</";
+    margin-right: 2px;
 }
 
 #section__main .main__figure{
     padding: 0em 2em 3em 2em;
-    width: 70%;
+    width: 50%;
+    max-width: 500px;
+    /* width: 15rem; */
+    /* height: 15rem; */
     margin: 0 auto;
 }
 
 #section__main .main__figure img{
     width: 100%;
     object-fit: content;
+}
+
+@media (min-width: 900px) {
+    #section__main .main__figure{
+        width: 70%;
+    }
+}
+
+@media (min-width: 1100px){
+    #section__main .main__figure{
+        width: 80%;
+        padding: 4rem;
+        margin: 0 auto 0 0;
+    }
+}
+
+@media (min-width: 1300px){
+    #section__main {
+        height: 80vh;
+    }
+    #section__main .main__info{
+        /* margin: auto 0; */
+        font-size: 150%;
+    }
+}
+
+@media (min-width: 1500px){
+    #section__main .main__info{
+        font-size: 170%;
+    }
+    #section__main .main__info .info__presentation,
+    #section__main .main__info .info__puesto{
+        font-size: 1.5rem;
+    }
 }
 
 #section__main .redes{
@@ -190,6 +326,12 @@ button{
     color: white;
 }
 
+@media (min-width: 1100px) {
+    #section__main .redes{
+        transform: none;
+    }
+}
+
 /*
 ============================================
             SECTION ABOUTME
@@ -220,7 +362,7 @@ button{
 #section__aboutme .aboutme__info .info__curriculum a{
     background-color: var(--primary-color);
     color: white;
-    padding: 1em 1em;
+    padding: .5em 1em;
     border-radius: .3em;
     display: inline-flex;
     gap: .5em;
@@ -229,6 +371,17 @@ button{
 
 #section__aboutme .aboutme__info .info__curriculum a:hover{
     background-color: var(--primary-color-black);
+}
+
+/*  */
+@media (min-width: 600px){
+    #section__aboutme .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #section__aboutme .aboutme__info .info__text{
+        padding-top: 0;
+    }
 }
 
 /*
@@ -305,6 +458,25 @@ button{
     font-size: .8rem;
 }
 
+@media (min-width: 768px){
+    #section__projects .projects__container{
+        /* display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: repeat(auto, 100px);
+        gap: 2em; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2em;
+        justify-content: center;
+    }
+    #section__projects .project__item{
+        /* max-width: 300px; */
+        width: 15rem;
+        height: 30rem;
+    }
+}
+
 /*
 ============================================
             SECTION SKILLS
@@ -316,8 +488,16 @@ button{
 
 #section__skills .skills__container{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 1em;
+
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#section__skills .skills__container > div{
+    width: 100%;
+    max-width: 400px
 }
 
 #section__skills .skills__container .skill__tab{
@@ -435,8 +615,8 @@ footer{
     background: var(--linear-color);
     padding: 1.3em;
     border-radius: .5em;
-    width: 300px;
-    max-width: 300px;
+    width: 100%;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     gap: .5em;
@@ -446,6 +626,7 @@ footer{
 
 .footer__contactme .contactme__title{
     font-weight: 600;
+    font-size: 1.2rem;
     color: white;
     text-transform: uppercase;
 }
@@ -464,6 +645,14 @@ footer{
     border-radius: .3em;
 }
 
+@media (min-width: 768px) {
+    .footer__contactme .contactme__inputs input,
+    .footer__contactme .contactme__inputs textarea,
+    .footer__contactme .contactme__submit button{
+        font-size: 1rem
+    }
+}
+
 textarea{
     resize: none;
     height: 7rem;
@@ -477,6 +666,7 @@ textarea{
     background-color: var(--primary-color);
     color: white;
     cursor: pointer;
+    width: 100%;
 }
 
 .footer__contactme .contactme__submit button:hover{
@@ -493,6 +683,25 @@ textarea{
 #section__projects,
 #section__skills{
     padding: 2em;
+    margin: 0 auto;
+}
+
+#section__aboutme{
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 700px;
+}
+
+#section__projects{
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+#section__skills{
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1000px;
 }
 
 #section__aboutme .title,
@@ -503,6 +712,14 @@ textarea{
     font-weight: 700;
     font-size: 1.3rem;
     margin-bottom: 1.5em;
+}
+
+@media (min-width: 768px) {
+    #section__aboutme .title,
+    #section__projects .title,
+    #section__skills .title{
+        text-align: center;
+    }
 }
 
 #switch__theme{
@@ -545,11 +762,18 @@ textarea{
     align-items: center;
     position: fixed;
     top: 90vh;
-    right: 1em;
+    right: 2em;
     opacity: .7;
     outline: none;
     border: none;
     cursor: pointer;
+}
+
+@media (min-width: 768px){
+    #web__top{
+        width: 3.5em;
+        height: 3.5em;
+    }
 }
 
 #web__top:hover{
