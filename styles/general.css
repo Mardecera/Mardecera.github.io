@@ -406,6 +406,7 @@ button{
     transform: scale(1);
     box-shadow: none;
     transition: transform .3s ease-out, box-shadow .3s ease-out;
+    outline: 1px solid #DC1477;
 }
 
 #section__projects .project__item:hover{
@@ -420,6 +421,14 @@ button{
     position: absolute;
     top: 1em;
     right: -1em;
+}
+
+@media (min-width: 768px){
+    #section__projects .project__item figure{
+        top: 5rem;
+        /* bottom: 1em; */
+        width: 25rem;
+    }
 }
 
 #section__projects .project__item figure img{
@@ -581,19 +590,31 @@ button{
 }
 
 #section__skills #skill__js .skill__line > span span:last-child{
-    width: 80%;
+    width: 85%;
 }
 
 #section__skills #skill__css .skill__line > span span:last-child{
-    width: 30%;
+    width: 80%;
 }
 
 #section__skills #skill__html .skill__line > span span:last-child{
-    width: 20%;
+    width: 85%;
 }
 
 #section__skills #skill__react .skill__line > span span:last-child{
     width: 10%;
+}
+#section__skills #skill__python .skill__line > span span:last-child{
+    width: 30%;
+}
+#section__skills #skill__photoshop .skill__line > span span:last-child{
+    width: 70%;
+}
+#section__skills #skill__illustrator .skill__line > span span:last-child{
+    width: 70%;
+}
+#section__skills #skill__figma .skill__line > span span:last-child{
+    width: 50%;
 }
 
 /*
