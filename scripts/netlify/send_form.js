@@ -1,4 +1,5 @@
-const MESSAGE = 'Your message was sent sucessfully! ✌'
+const MESSAGE =
+    'Thanks for writing to me, I will answer you as soon as possible. ✌'
 const $ = (query) => document.querySelector(query)
 
 const contactmeForm = $('#contactme')
@@ -65,13 +66,14 @@ function notificacionPopup(message, type) {
     }
     iconWrapper.appendChild(i)
     const clone = template.cloneNode(true)
-    element.appendChild(clone)
-    setTimeout(() => {
+    const closeButton = clone.querySelector('#popup__close')
+    closeButton.onclick = () => {
         document
             .querySelector('#notification__popup')
             .classList.add('invisible')
         setTimeout(() => {
             document.querySelector('#notification__popup').remove()
         }, 1500)
-    }, 4000)
+    }
+    element.appendChild(clone)
 }
