@@ -16,6 +16,11 @@
             crossorigin="anonymous"
         />
         <script src="./scripts/functions.js" type="module" defer></script>
+        <script
+            src="./scripts/netlify/send_form.js"
+            type="module"
+            defer
+        ></script>
     </head>
     <body>
         <main>
@@ -368,9 +373,10 @@
             </section>
             <footer>
                 <form
-                    action="https://formsubmit.co/mardecera.personal@gmail.com"
                     method="post"
+                    id="contactme"
                     class="footer__contactme"
+                    netlify
                 >
                     <div class="contactme__title">Contact me</div>
                     <div class="contactme__inputs">
