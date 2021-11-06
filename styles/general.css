@@ -932,7 +932,7 @@ textarea {
 
 #notification__popup.invisible {
     right: -100%;
-    animation: invisible 1s linear;
+    animation: invisible 0.5s linear;
     opacity: 0.9;
 }
 
