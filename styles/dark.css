@@ -1,5 +1,5 @@
-:root{
-    --primary-color: #FF4D93;
+:root {
+    --primary-color: #ff4d93;
     --primary-color-light: #fd5f9f;
     --primary-color-black: #ee3680;
 
@@ -12,69 +12,78 @@
     --terceary-color-black: #8794d3;
 }
 
-main.dark{
-    background-image:   radial-gradient(#5675a0 1px, transparent 1px),
-                        radial-gradient(#5675a0 1px, var(--secondary-color-light) 1px);
-    background-size: 34px 34px;
-    background-position: 0 0,17px 17px;
+main.dark {
+    background-color: #283b57;
 }
 
-main.dark a,
-main.dark i,
-main.dark body,
-main.dark span,
-main.dark button{
-    color: var(--terceary-color-light);
+main.dark #section__nav {
+    background-color: #283b57;
+    color: #ccd0e9;
+    box-shadow: 2px 2px 20px #0b182c;
 }
 
-main.dark .section__nav{
-    background-color: var(--secondary-color-light);
+main.dark #section__nav .icon__logo {
+    color: #ccd0e9;
 }
 
-main.dark .btn__menu .icon__bars .icon__bars__content span:nth-child(1),
-main.dark .btn__menu .icon__bars .icon__bars__content span:nth-child(2),
-main.dark .btn__menu .icon__bars .icon__bars__content span:nth-child(3){
-    background-color: var(--terceary-color-light);
+main.dark #section__nav .nav__sections {
+    background-color: #283b57;
+    color: #ccd0e9;
 }
 
-main.dark .section__nav .nav__buttons ul li a:hover,
-main.dark .section__nav .nav__buttons .btn__close:hover i{
-    color: var(--primary-color-light);
+main.dark #section__nav .nav__sections ul li a {
+    color: #ccd0e9;
 }
 
-main.dark .section__nav .nav__buttons{
-    background-color: var(--secondary-color);
+main.dark #section__nav .nav__sections ul li a:hover {
+    color: #ff4d93;
 }
 
-main.dark .section__nav .nav__buttons__extra .nav__redes .red__item{
-    border: 1px solid var(--terceary-color-light);
+main.dark #section__nav .nav__sections #switch__theme.active {
+    background-color: #111f35;
 }
 
-main.dark .section__nav .nav__buttons__extra .nav__redes .red__item:hover{
-    background-color: var(--terceary-color-light);
+main.dark #section__main {
+    background-color: #111f35;
 }
 
-main.dark .section__nav .nav__buttons__extra .nav__redes .red__item:hover i{
-    color: var(--secondary-color);
+main.dark #section__main .main__info {
+    color: #ccd0e9;
 }
 
-main.dark .section__main .sub__info a{
-    background-color: var(--primary-color-black);
+main.dark #section__main .redes button:hover,
+main.dark #section__main .redes div:hover {
+    background-color: #ee3680;
 }
 
-main.dark .section__projects .sub__carrousel .btn__left,
-main.dark .section__projects .sub__carrousel .btn__right{
-    background-color: var(--primary-color-black);
+main.dark #section__aboutme,
+main.dark #section__projects,
+main.dark #section__skills,
+main.dark #section__aboutme .title,
+main.dark #section__projects .title,
+main.dark #section__skills .title {
+    color: #ccd0e9;
 }
 
-main.dark .section__aboutme,
-main.dark .section__contactme{
-    color: var(--terceary-color-light);
+main.dark #section__skills .skills__container .skill__tab {
+    background-color: #1a2941;
 }
 
-main.dark .section__aboutme .aboutme__container .sub__description p{
-    color: var(--secondary-color-light);
+main.dark footer {
+    background-color: #111f35;
 }
-main.dark .section__contactme .sub__form .field label{
-    color: #7c96bd;
+
+main.dark #web__top {
+    background-color: white;
+    color: #1a2941;
+    opacity: 0.8;
+}
+
+main.dark #web__top:hover {
+    opacity: 1;
+    box-shadow: 2px 2px 30px white;
+}
+
+main.dark code {
+    background-color: #1a2941;
 }

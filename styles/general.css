@@ -104,8 +104,14 @@ button {
 }
 
 #section__nav .nav__sections .bar__close {
-    padding: 2em 0;
+    padding: 1em;
     cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.2s linear;
+}
+
+#section__nav .nav__sections .bar__close:hover {
+    transform: scale(1.2);
 }
 
 #section__nav .nav__sections ul {
@@ -119,6 +125,15 @@ button {
 
 #section__nav .nav__sections ul li a:hover {
     color: var(--primary-color);
+}
+
+#section__nav .nav__sections ul li {
+    transform: scale(1);
+    transition: transform 0.1s linear;
+}
+
+#section__nav .nav__sections ul li:hover {
+    transform: scale(1.2);
 }
 
 #section__nav .nav__sections.hidden {
@@ -781,16 +796,16 @@ textarea {
 }
 
 #switch__theme {
-    background-color: var(--secondary-color);
     border-radius: 1rem;
-    color: white;
-    padding: 0.3em 0.5em;
+    color: var(--secondary-color);
+    padding: 0.5em 0.5em;
     display: inline-flex;
     gap: 0.7em;
     font-size: 0.9rem;
     position: relative;
     align-items: center;
     cursor: pointer;
+    background-color: orange;
 }
 
 #switch__theme::after {
@@ -802,24 +817,29 @@ textarea {
     border-radius: 1rem;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.308);
     left: 50%;
-    transition: left 0.3s ease-out;
+    transition: left 0.1s linear;
 }
 
 #switch__theme.active::after {
-    left: 0%;
+    left: -2%;
+}
+
+#switch__theme.active {
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 #web__top {
     background-color: var(--secondary-color);
-    width: 2.5em;
-    height: 2.5em;
+    width: 3.5em;
+    height: 3.5em;
     border-radius: 0.3em;
     color: white;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 90vh;
+    top: 85vh;
     right: 2em;
     opacity: 0.7;
     outline: none;

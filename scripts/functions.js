@@ -1,6 +1,7 @@
 const $ = (query) => document.querySelector(query)
 $('#switch__theme').onclick = () => {
     $('#switch__theme').classList.toggle('active')
+    $('main').classList.toggle('dark')
 }
 $('.bar__close').onclick = () => {
     $('.nav__sections').classList.toggle('hidden')
