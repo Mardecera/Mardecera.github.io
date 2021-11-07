@@ -1,7 +1,12 @@
 const $ = (query) => document.querySelector(query)
+const isDark = JSON.parse(localStorage.getItem('isDark')) || false
+isDark ? $('main').classList.add('dark') : null
+
 $('#switch__theme').onclick = () => {
     $('#switch__theme').classList.toggle('active')
     $('main').classList.toggle('dark')
+    const isDark = $('main').classList.contains('dark')
+    localStorage.setItem('isDark', isDark)
 }
 $('.bar__close').onclick = () => {
     $('.nav__sections').classList.toggle('hidden')
